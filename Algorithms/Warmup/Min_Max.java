@@ -1,3 +1,20 @@
+/*
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+Input Format
+
+A single line of five space-separated integers.
+
+Constraints
+
+Each integer is in the inclusive range [1......10^9].
+Output Format
+
+Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. (The output can be greater than a 32 bit integer.)
+*/
+
+
 package Warmup;
 
 
@@ -7,35 +24,18 @@ import java.util.*;
 public class Min_Max {
 
     
-    public static void miniMaxSum(int[] arr) {
-    	
-    	long min=10000000,max=0;	
-    	for(int i=0;i<5;i++) 
-    	{
-    		long sum=0;
-        	for(int j=0;j<5;j++)
-        		{
-        			if(i!=j) 
-        			{
-        			sum += arr[j];
-        			}
-        		
-        		}
-        	System.out.println(sum);
-        	 if(sum >max && sum<min) {
-        		max=sum;
-        		min=sum;
-        	}
-        	else if(sum>max){
-        		max=sum;
-        	}
-        	else if (sum<min){
-        		min = sum;
-        	}
-        }
-    	
-    	System.out.print(min);
-    	System.out.println(" "+max);
+    static void miniMaxSum(int[] arr) {
+       
+       long max=0,min=0,sum=0;
+
+         for(int i=0;i<5;i++){    
+            sum += arr[i];
+        
+    }
+        Arrays.sort(arr);
+        max= sum - arr[0]; // The sum of 4 no.s is max when the smallest no. in the array is subtracted
+        min= sum - arr[4]; // The sum of 4 no.s is min when the largest no. in the array is subtracted        
+        System.out.println(min+" "+max);
     }
 
     private static final Scanner scan = new Scanner(System.in);
