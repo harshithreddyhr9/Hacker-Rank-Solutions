@@ -51,8 +51,10 @@ public class Solution {
         String B=sc.next();
         /* Enter your code here. Print output to STDOUT. */
         System.out.println(A.length()+B.length()); // Printing the sum of lengths of 2 strings
-        
-        /* compareTo is used to compare 2 strings lexicographically. If both the strings are equal then this method returns 0 else it returns positive or negative value. The result is positive if the first string is lexicographically greater than the second string else the result would be negative.
+       
+     /* compareTo is used to compare 2 strings lexicographically. 
+     If both the strings are equal then this method returns 0 else it returns positive or negative value. 
+     The result is positive if the first string is lexicographically greater than the second string else the result would be negative.
         */
         int i = A.compareTo(B);  
         if(i>0){
