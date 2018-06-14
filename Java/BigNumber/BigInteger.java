@@ -28,7 +28,7 @@ Sample Output
 /*
 BigInteger class is used for mathematical operation which
 involves very big integer calculations that are outside the limit of all available primitive data types.
-There is no theoretical limit on the upper bound of the range
+
 */
 import java.io.*;
 import java.util.*;
